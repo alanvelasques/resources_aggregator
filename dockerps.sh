@@ -1,1 +1,1 @@
-/usr/local/bin/docker ps -a
+docker ps

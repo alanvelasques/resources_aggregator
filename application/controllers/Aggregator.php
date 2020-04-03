@@ -5,11 +5,16 @@ class Aggregator extends CI_Controller {
 
 	public function index()
 	{
-		$output = shell_exec('./dockerps.sh 2>&1');
+		$this->load->view('aggregator_return');
+	}
+
+	public function get_containers(){
+		$output = shell_exec('/home/alan/projetos/mestrado/aggregator/dockerps.sh 2>&1');
 		echo $output;
 	}
 
-	public function get_container(){
-		$this->load->view('aggregator_return');
+	public function request_container(){
+		$output = shell_exec('/home/alan/projetos/mestrado/aggregator/dockerrun.sh 2>&1');
+		echo $output;
 	}
 }
