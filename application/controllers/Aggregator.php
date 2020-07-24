@@ -9,12 +9,14 @@ class Aggregator extends CI_Controller {
 	}
 
 	public function get_containers(){
-		$output = shell_exec('/home/alan/projetos/mestrado/aggregator/dockerps.sh 2>&1');
+		//$output = shell_exec('/home/alan/projetos/mestrado/aggregator/dockerps.sh 2>&1');
+		$output = shell_exec('/var/www/html/aggregator/dockerps.sh 2>&1');
 		echo $output;
 	}
 
 	public function request_container(){
-		$output = shell_exec('/home/alan/projetos/mestrado/aggregator/dockerrun.sh 2>&1');
+		//$output = shell_exec('/home/alan/projetos/mestrado/aggregator/dockerrun.sh 2>&1');
+		$output = shell_exec('/var/www/html/aggregator/dockerrun.sh 2>&1');
 		echo $output;
 	}
 }
