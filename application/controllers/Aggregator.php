@@ -17,6 +17,8 @@ class Aggregator extends CI_Controller {
 	public function request_container(){
 		//$output = shell_exec('/home/alan/projetos/mestrado/aggregator/dockerrun.sh 2>&1');
 		$output = shell_exec('/var/www/html/aggregator/dockerrun.sh 2>&1');
+		echo "<pre>";
 		echo $output;
+		echo "</pre>";
 	}
 }
